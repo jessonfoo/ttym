@@ -53,7 +53,7 @@ let countDown = new Date('Aug 31, 2019 23:01:00').getTime(),
     x = setInterval(function() {
 
       let now = new Date().getTime(),
-          distance = now - countDown;
+          distance = countDown - now;
 
       document.getElementById('days').innerText = Math.floor(distance / (day)),
         document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
