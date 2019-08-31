@@ -1,38 +1,6 @@
 <html>
-<header>
-
-</header>
-<body>
         <style>
-          body {
-  font-family: -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen-Sans,
-    Ubuntu,
-    Cantarell,
-    "Helvetica Neue",
-    sans-serif;
-}
-          html, body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container {
-  margin: 0 auto;
-}
-          * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -63,9 +31,11 @@ li span {
   display: block;
   font-size: 4.5rem;
 }
-            <style>
-      <div class="container">
-  <h1 id="head">Time Til We Meet:</h1>
+            </style>style>
+<body>
+
+<div class="container">
+  <h1 id="head">Til We Meet:</h1>
   <ul>
     <li><span id="days"></span>days</li>
     <li><span id="hours"></span>Hours</li>
@@ -73,25 +43,26 @@ li span {
     <li><span id="seconds"></span>Seconds</li>
   </ul>
 </div>
-<scriipt>
-const second = 1000,
+<script> 
+var second = 1000,
       minute = second * 60,
       hour = minute * 60,
       day = hour * 24;
 
-let countDown = new Date('AUG 31, 2019 21:01:00').getTime(),
+let countDown = new Date('Aug 31, 2019 23:01:00').getTime(),
     x = setInterval(function() {
 
       let now = new Date().getTime(),
-          distance = countDown - now;
+          distance = now - countDown;
 
       document.getElementById('days').innerText = Math.floor(distance / (day)),
         document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-
+// add stuff later      
 
     }, second)
 </script>
   </body>
+
 </html>
